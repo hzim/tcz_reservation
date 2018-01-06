@@ -49,7 +49,7 @@ COURT_FAKT = 100
 FREE_MINUTE = 45
 
 #some colors for backgrounds
-BG_FREE = "#FFFFFF"
+BG_FREE = "#e4e4e4"
 BG_OWN = "#FF7FFF"
 BG_OTHER = "#7FFFFF"
 BG_FREEHOUR = "#CFCFCF"

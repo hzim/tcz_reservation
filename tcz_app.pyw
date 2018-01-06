@@ -44,6 +44,12 @@ URL_GETHOURS_DATE = 'http://127.0.0.1:8000/tczhours/atdate.json/?year=%d&month=%
 URL_GETHOURS_FROMNOW = 'http://127.0.0.1:8000/tczhours/fromnow.json/'
 URL_POSTHOUR = 'http://127.0.0.1:8000/tczhours/%s/'
 
+URL_GETUSERS = 'http://tczellerndorf.pythonanywhere.com/tczusers.json/'
+URL_GETHOURS = 'http://tczellerndorf.pythonanywhere.com/tczhours.json/'
+URL_GETHOURS_DATE = 'http://tczellerndorf.pythonanywhere.com/tczhours/atdate.json/?year=%d&month=%d&day=%d'
+URL_GETHOURS_FROMNOW = 'http://tczellerndorf.pythonanywhere.com/tczhours/fromnow.json/'
+URL_POSTHOUR = 'http://tczellerndorf.pythonanywhere.com/tczhours/%s/'
+
 # token for Raspi
 HTTP_HEADER = {
     'Authorization' : 'Token 4069b72a06b076a32df8a6088a662a2e8536e4c8',

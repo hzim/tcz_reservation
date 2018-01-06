@@ -39,7 +39,7 @@
       </div>
 
       {% if user.is_authenticated %} {% if allUsers %}
-      <label class="header_user_label">Reservieren für:</label>
+      <label class="header_user_label">Reservieren/Freigeben für:</label>
       <div class="header_user">
         <form action="{% url 'courts' day=savedDate.day month=savedDate.month year=savedDate.year %}" method="post">
           <select name="selectedUser" class="userinput" data-live-search="true" data-size="10" id="id_selectedUser">
@@ -48,7 +48,7 @@
             {% endfor %}
           </select>
           <!-- style will be changed if javascript is working -->
-          <button class="button_1" id="id_NavSave" name="SetHour" style="display:none">SPEICHERN</button>
+          <button class="button_1" id="id_NavSave" name="SetHour">SPEICHERN</button>
           <button class="button" id="id_SetUser" name="SetUser" style="display:none" type="submit">Neuer User</button>
       </div>
       {% else %}
@@ -87,18 +87,18 @@
           Anmelden
           <span class="icon">
             <img src="{% static 'img/enter.png' %}">
-          </span></a>
+          </span>
+        </a>
       </div>
       {% endif %}
-  </div>
-  </div>
 
-  </header>
 
-  {% block body_block %}{% endblock %}
-  </div>
+    </header>
+
+    {% block body_block %}{% endblock %}
+  
   <footer>
-    <a href="http://www.tczellerndorf.at">Zur Homepage des TCZ - &copy 2018</a>
+    <a href="http://www.tczellerndorf.at">&copy 2018 Tennisclub Zellerndorf, ZVR 330668948</a>
   </footer>
   <script src="{% static 'js/detail.js' %}"></script>
   <script>
@@ -106,6 +106,7 @@
     dateInput.init();
     processChoices.init();
   </script>
+  </div>
 </body>
 
 </html>
