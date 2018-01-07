@@ -86,7 +86,7 @@ body{
  * header for normal computer displays
  * smaller displays will get default .header layout - see above
 */
-@media only screen and (min-width: 1350px)  {
+@media only screen and (min-width: 1500px)  {
     .header {
         grid-template-columns: 1fr 3fr 4fr 2fr 2fr;
         grid-template-areas:
@@ -95,25 +95,17 @@ body{
     }
 }
 
-/* styles */
-.navicon{
-    height: 42px;
-    width: 42px;
-    padding: 0%;
-    border: 0;
+@media only screen and (min-width: 750px) and (max-width: 1499px) {
+    .header {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+          "header_logo         header_login_link  header_help_link"
+          "header_date_label   header_date        header_date"
+          "header_user_label   header_user        header_user"
+          "header_login_label  header_login_name  header_login_name"
+    }
 }
-
-.userinput{
-    font-size: 28px;
-    margin: 0px;
-}
-
-.container{
-    width:80%;
-    margin:auto;
-    overflow:hidden;
-}
-
+/* styles for classes */
 .button_1{
     height: 40px;
     background: #e8491d;
@@ -124,6 +116,16 @@ body{
     color: #e4e4e4;
     vertical-align: top;
     font-size: 28px;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+
+.content{
+    border-bottom: #e8491d 3px solid;
 }
 
 .header_login_name{
@@ -152,8 +154,16 @@ body{
     border-bottom: #e8491d 3px solid;
 }
 
-.content{
-    border-bottom: #e8491d 3px solid;
+.navicon{
+    height: 42px;
+    width: 42px;
+    padding: 0%;
+    border: 0;
+}
+
+.userinput{
+    font-size: 28px;
+    margin: 0px;
 }
 
 .table-content{
@@ -162,9 +172,24 @@ body{
     font-size: 20px;
 }
 
-th{
-    background-color: #35424a;
-    color: #e4e4e4;;
+/* styles for html elements */
+
+footer{
+    padding: 0px;
+    color: #e4e4e4;
+    background: #e8491d;
+    text-align: center;
+}
+
+footer a{
+    color: #e4e4e4;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+form{
+    display: inline-block;
 }
 
 header{
@@ -182,11 +207,8 @@ header a{
     margin-left: 10px;
 }
 
-footer a{
-    color: #e4e4e4;
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 10px;
+header a:hover{
+    color: #cccccc;
 }
 
 header nav{
@@ -194,32 +216,22 @@ header nav{
     margin-top: 10px;
 }
 
-header a:hover{
-    color: #cccccc;
-}
-
-input[type="date"]{
-    padding: 5px;
-    height: 28px;
-    width: 240px;
-    font-size: 28px;
-    vertical-align: top;
-}
-
-form{
-    display: inline-block;
-}
-
-footer{
-    padding: 0px;
-    color: #e4e4e4;
-    background: #e8491d;
-    text-align: center;
-}
-
 hr { 
     width: 95%; 
     height: 5px; 
     margin: 0 auto;
     background: #e8491d;;
+}
+
+input[type="date"]{
+    padding: 5px;
+    height: 28px;
+    width: 250px;
+    font-size: 28px;
+    vertical-align: top;
+}
+
+th{
+    background-color: #35424a;
+    color: #e4e4e4;;
 }
