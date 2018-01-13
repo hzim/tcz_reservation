@@ -17,7 +17,8 @@ from rest_framework.authentication import SessionAuthentication,\
 from .constants import INFO_LOGIN,\
                        ERR_DATE_INVALID,\
                        ERR_DATE_INVALID_STR,\
-                       SUCCESS_NORESERVATION
+                       SUCCESS_NORESERVATION,\
+                       TENNIS_PLATZ_USER
 from .common import is_normal_user, is_super_user, date_is_wrong
 from .views_helper import make_choice_table,\
                           get_next_reservation,\
@@ -97,8 +98,12 @@ def get_user_list(request, sel_user):
     users = User.objects.all()
     superuser = is_super_user(request.user.username)
     for user in users:
-      if superuser or is_normal_user(user.username):
-        all_users.append(user.username)
+      if superuser:
+        if is_super_user(user.username):
+          all_users.append(user.username)
+      else:
+        if is_normal_user(user.username) and user.username != TENNIS_PLATZ_USER:
+          all_users.append(user.username)
   # sort by names and insert current user as first selection entry
   all_users.sort()
   all_users.insert(0, own_user_name)

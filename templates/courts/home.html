@@ -1,73 +1,85 @@
 {% extends "base.html" %} {% block body_block %}
 <div class="content">
     <h1>TC Zellerndorf Platzeinteilung</h1>
-    <h4>Hier können Mitglieder des TC-Zellerndorfs für sich und andere Mitglieder Plätze reservieren und auch wieder freigeben</h4>
-    <h4>Diese Seite besteht aus dieser Hilfe-Seite, dem Anmelde- und dem Reservierungsformular</h4>
+    <p>Hier können Mitglieder des TC-Zellerndorfs für sich und andere Mitglieder Plätze reservieren und auch wieder freigeben</p>
+    <p>Diese Seite besteht aus dieser Hilfe Seite, dem Anmelde- und dem Reservierungsformular</p>
     <hr>
-    <h4>Bei der ersten Anwahl ist folgende Navigationsleiste sichtbar:</h4>
+    <h2>Hilfeseite</h2>
     {% load static %}
 
-    <h3>Die Navigation erfolgt durch Anklicken einer der 3 Menutasten</h3>
-    <h4>
+    <p>Die Navigation erfolgt durch Anklicken einer der 3 Menutasten</p>
+    <p>
         <img src="{% static 'img/navbar_heute.png' %}" alt="Aktuellen Tag anzeigen"> Die Platzeinteilung des aktuellen Tages wird angezeigt</h4>
-    Anmerkung: Im nicht angemeldeten Zustand ist keine Änderung von Reservierungen erlaubt.
-    <h4>
-        <img src="{% static 'img/navbar_anmelden.png' %}" alt="Anmeldeformular öffnen"> Das Anmeldeformular wird angewählt</h4>
-    <h4>
-        <img src="{% static 'img/navbar_hilfe.png' %}" alt="Hilefeseite anzeigen"> Die Hilfeseite wird angewählt</h4>
+        Im nicht angemeldeten Zustand ist keine Änderung von Reservierungen erlaubt.
+    </p>
+    <p>
+        <img src="{% static 'img/navbar_anmelden.png' %}" alt="Anmeldeformular öffnen"> Das Anmeldeformular wird angewählt
+    </p>
+    <p>
+        <img src="{% static 'img/navbar_hilfe.png' %}" alt="Hilefeseite anzeigen"> Diese Hilfeseite wird angewählt
+    </p>
     <hr>
-    <h3>Anmeldeformular</h3>
-    <h4>Im Anmeldeformular müssen der Mitgliedername und das Passwort eingegeben werden. Der Mitgliedername besteht aus Familienname
-        und Vorname (getrennt durch ein Leerzeichen)</h4>
+    <h2>Anmeldeformular</h2>
+    <p>Im Anmeldeformular müssen Namen und Passwort eingegeben werden. Der Name besteht aus Familien- und Vorname eines Mitglieds
+        (getrennt durch ein Leerzeichen).
+    </p>
 
     <img src="{% static 'img/login_form.png' %}" alt="Login Formular">
-    <p></p>
-    Wurden Name und Passwort falsch eingegeben wird zur erneuten Eingabe aufgefordert Bei erfolgreicher Anmeldung wird automatisch
-    die Hilfeseite angewählt - wobei in der Navigationsleiste die Anmeldetaste durch die Abmeldetaste ersetzt wird und der
-    aktuelle Benutzer angezeigt wird.
-    <p></p>
-    <h4>
-        <img src="{% static 'img/navbar_abmelden.png' %}" alt="Abmelden"> Durch Drücken dieser Taste wird der angemeldete Benutzer wird abgemeldet</h4>
-    <p></p>
+    <p>
+        Wurden Name und Passwort falsch eingegeben wird zur erneuten Eingabe aufgefordert. Bei erfolgreicher Anmeldung wird automatisch
+        die Platzeinteilung des aktuellen Tages angewählt - wobei in der Navigationsleiste "Anmelden" durch die "Abmelden"
+        ersetzt wird und der angemeldete Benutzer angezeigt wird.
+    </p>
+    <p>
+        <img src="{% static 'img/navbar_abmelden.png' %}" alt="Abmelden">
+    </p>
+    <p>
+        Durch Klick auf "Abmelden" wird der angemeldete Benutzer wird abgemeldet
+    </p>
     <hr>
-    <h4>
-        <img src="{% static 'img/navbar_heute.png' %}" alt="Aktueller Tag"> Durch Drücken dieser Taste wird die Platzbelegung des aktuellen Tages angezeigt</h4>
-    <h3> In der Navigationsleiste werden 2 weitere Felder sichtbar</h3>
+    <h2>Platzeinteilung</h2>
     <h3>Anzeige des Datums</h3>
-    <h4>Bei den meisten Browsern (firefox, chrome, edge) öffnet sich durch einen Klick in das Datumsfeld ein Datumsdialog. (bei
+    <p>Bei den meisten Browsern (firefox, chrome, edge) öffnet sich durch einen Klick in das Datumsfeld ein Datumsdialog. (bei
         älternen Browsern kann das Datum direkt in das Feld eingegeben werden). Zusätzlich können auch die beiden Pfeiltasten
-        zum Vor und Zurückblättern verwendet werden Das Datum kann direkt durch Eingabe geändert werden. Durch Klick in das
-        Datumsfeld wird ein Kalender zum Einstellen des Datums angezeigt</h4>
-    <p></p>
-    <img src="{% static 'img/navbar_datum.png' %}" alt="Aktueller Tag">
-    <p></p>
+        zum Vor und Zurückblättern verwendet werden.
+    </p>
+    <p>
+        <img src="{% static 'img/navbar_datum.png' %}" alt="Aktueller Tag">
+    </p>
     <h3>Name des Mitglieds</h3>
-    <img src="{% static 'img/navbar_mitglied_aktuell.png' %}" alt="Mitglied">
-    <h4>In diesem Feld wird der Name angezeigt für den die Reservierung gemacht wird. Nach dem Anmelden ist dieser Name mit dem
+    <p>In diesem Feld wird der Name angezeigt für den die Reservierung gemacht wird. Nach dem Anmelden ist dieser Name mit dem
         Namen des angemeldeten Mitglieds identisch. Durch Klick in das Namensfeld wird die Mitgliederliste angezeigt. Durch
-        Auswahl (Klick auf einen Namen) wird der Name etsprechend geändert.</h4>
-    Hinweis: Bei geöffneter Auswahlliste wird durch Eintippen von Buchstaben in der Mitgliderliste navigiert.
-    <p></p>
-    <img src="{% static 'img/navbar_mitglied.png' %}" alt="Mitglied">
-    <p></p>
-    <hr>
-    <p></p>
-    <h4>Nach der Auswahl des Datums und des Namens kann eine freie Stunde angeklickt werden und durch Klick auf
-        <img src="{% static 'img/navbar_save.png' %}"
-            alt="Speichern"> der Platz reserviert werden </h4>
-    <img src="{% static 'img/reservierung_form_frei.png' %}" alt="Stunde reservieren">
-    <p></p>
-    <h4>Nach erfolgreicher Reservierung wird der Name bei der reservierten Stunde eingetragen</h4>
+        Auswahl (Klick auf einen Namen) wird der Name etsprechend geändert.
+    </p>
+    <p>
+        <img src="{% static 'img/navbar_mitglied_aktuell.png' %}" alt="Mitglied">
+    </p>
+    Hinweis: Bei geöffneter Auswahlliste wird durch Eintippen von Buchstaben in der Mitgliederliste navigiert.
+    <p>
+        <img src="{% static 'img/navbar_mitglied.png' %}" alt="Mitglied">
+    </p>
+    <p>
+        Nach der Auswahl des Datums und des Namens kann eine freie Stunde angeklickt werden und durch Klick auf "Speichern" der Platz
+        reserviert werden
+    </p>
+    <p>
+        <img src="{% static 'img/reservierung_form_frei.png' %}" alt="Stunde reservieren">
+    </p>
+    <p>
+        Nach erfolgreicher Reservierung wird der Name bei der reservierten Stunde eingetragen
+    </p>
     <img src="{% static 'img/reservierung_form_belegt.png' %}" alt="Stunde freigeben">
     <p></p>
-    <h4>die Freigabe eines Platzes erfolgt durch Auswahl der entsprechenden Stunde und Klick auf
-        <img src="{% static 'img/navbar_save.png' %}"
-            alt="Speichern">
-    </h4>
-    <p></p>
-    <h4>Tritt bei der Reservierung ein Problem auf wird ein entsprechende Fehlertext ausgegeben</h4>
-    <img src="{% static 'img/reservierung_form_belegt_error.png' %}" alt="Stunde freigeben">
-    <p></p>
+    <p>
+        die Freigabe eines Platzes erfolgt durch Auswahl der entsprechenden Stunde und Klick auf "Speichern"
+    </p>
+    <p>
+        Tritt bei der Reservierung ein Problem auf wird ein entsprechende Fehlertext ausgegeben (zum Beispiel wenn die maximale Anzahl
+        der reservierten Stunden schon erreicht war)
+    </p>
+    <p>
+        <img src="{% static 'img/reservierung_form_belegt_error.png' %}" alt="Stunde freigeben">
+    </p>
     <hr>
     <h2>Zusammenfassung</h2>
     <ul>
@@ -75,27 +87,28 @@
         <li>Zum Reservieren eines Platzes bitte zuerst "Anmelden" - sonst kann man nur ansehen</li>
         <li>Reserviert werden kann für jedes Mitglied.</li>
         <li>In der Mitgliederliste kann durch eintippen eines Namesteils navigiert werden</li>
-        <li>Reservieren durch Anklicken eines freien Platzes und Klick auf "Änderungen speichern"</li>
+        <li>Reservieren durch Anklicken eines freien Platzes und Klick auf "Speichern"</li>
         <li>Freigeben funktioniert genauso - Es können nur Stunden für das eingestellte Mitglied freigegeben werden</li>
         <li>Das Datum kann durch Klick auf die Pfeile um einen Tag nach vor/zurück geändert werden</li>
         <li>bei einem Klick in das Datumsfeld wird ein Kalender zur Datumseingabe geöffnet</li>
-        <li>normale User (siehe unten) können nur 14 Tage in die Zukunft reservieren</li>
     </ul>
-    <p></p>
-    <h2>Beim Reservieren gibt es folgende Prüfungen</h2>
-    <h3>"besondere" Mitglieder z.B. "Damen1", "Herren1", "TCZ"</h3>
+    <h3>
+        Einschränkungen bei der Reservierung
+    </h3>
     <ul>
-        <li>haben keine Einschränkung bei der Anzahl der Stunden</li>
-        <li>dürfen auch andere Reservierungen überschreiben</li>
-    </ul>
-    <h3>"normale" Mitglieder</h3>
-    <ul>
-        <li>2 Stunden in der Zukunft (maximal 14 Tage im voraus) dürfen reserviert werden</li>
-        <li>Wenn eine reservierte Stunde abgelaufen ist, kann am nächsten Tag eine neue Stunde reserviert werden</li>
-        <li>Reservierungen können bis maximal eine Stunde vor Spielbeginn storniert werden, Änderungen danach sind nicht möglich</li>
+        <li>2 Stunden in der Zukunft für maximal 14 Tage im Voraus dürfen reserviert werden</li>
+        <li>Wenn eine reservierte Stunde abgelaufen ist, kann erst ab dem nächsten Tag eine neue Stunde reserviert werden</li>
+        <li>Reservierungen können bis maximal eine Stunde vor Spielbeginn storniert werden</li>
         <li>Reservierungen für die aktuelle Stunde bzw. ab der 45 Minute für die nächste Stunde werden als freie Stunden (grau)
-            eingetragen</li>
-        <li>Diese freien Stunden sind unabhängig von der Anzahl der vorreservierten Stunden möglich und nicht limitiert.</li>
+            eingetragen. Diese freien Stunden sind unabhängig von der Anzahl der vorreservierten Stunden möglich und nicht
+            limitiert.
+        </li>
+    </ul>
+
+    <h3>Ausnahmen gibt es für "besondere" Mitglieder z.B. "Damen1", "Herren1", "TCZ"</h3>
+    <ul>
+        <li>diese haben keine Einschränkung bei der Anzahl der Stunden</li>
+        <li>dürfen auch bereits vorhandene Reservierungen überschreiben</li>
     </ul>
 </div>
 <div class="message">

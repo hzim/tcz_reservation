@@ -27,19 +27,21 @@ APP_USER = 'TCZ'
 # superusers usernames
 SUPER_USERS = ('Frei',
                'TCZ',
+               'TPI',
                'Damen1',
                'Damen2',
-               'Damen35+',
-               'Damen45+',
+               'Damen35',
+               'Damen45',
                'Herren1',
                'Herren2',
                'Herren3',
-               'Herren35+',
-               'Herren45+',
-               'Herren55+',
-               'Herren65+',
-               'JugendU13',
+               'Herren35_1',
+               'Herren35_2',
+               'Herren55',
+               'Herren65',
+               'Jugend',
               )
+TENNIS_PLATZ_USER = 'Tennisplatz'
 
 # offset for court in checkbox id - the checkbox id is calculated
 # COURT_FAKT*courtnumber + hour
