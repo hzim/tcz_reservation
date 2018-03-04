@@ -47,8 +47,12 @@ def send_email(tcz_hour, email_action):
   from_email = EMAIL_ADDRESS
   recipient_list = [tcz_hour.tcz_user.email]
   logger = logging.getLogger(__name__)
-  logger.info("send email to: " + recipient_list[0] + ": "+ message)
-  send_mail(subject, message, from_email, recipient_list)
+  if is_super_user(tcz_hour.tcz_user.username) or tcz_hour.tcz_user.email == EMAIL_ADDRESS:
+    # do not send emails for super users
+    logger.info("no mail to: " + recipient_list[0] + ": "+ message)
+  else:
+    logger.info("send email to: " + recipient_list[0] + ": "+ message)
+    send_mail(subject, message, from_email, recipient_list)
 
 class SavedDate():
   """ structure for date
